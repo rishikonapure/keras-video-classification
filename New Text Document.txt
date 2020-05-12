@@ -1,0 +1,30 @@
+python train.py --dataset Sports-Type-Classifier/data --model output/activity.model --label-bin output/lb.pickle --epochs 50
+
+
+
+
+python predict_video.py --model model/activity.model --label-bin model/lb.pickle --input example_clips/tennis.mp4 --output output/tennis_1frame.avi --size 1
+
+
+python predict_video.py --model model/activity.model --label-bin model/lb.pickle --input example_clips/tennis.mp4 --output output/tennis_128frames_smoothened.avi --size 128
+
+
+ python predict_video.py --model model/activity.model \
+	--label-bin model/lb.pickle \
+	--input example_clips/lifting.mp4 \
+	--output output/lifting_1frame.avi \
+	--size 1
+
+
+python predict_video.py --model model/activity.model \
+	--label-bin model/lb.pickle \
+	--input example_clips/lifting.mp4 \
+	--output output/lifting_128frames_smoothened.avi \
+	--size 128
+
+python predict_video.py --model model/activity.model \
+	--label-bin model/lb.pickle \
+	--input example_clips/soccer.mp4 \
+	--output output/soccer_128frames_smoothened.avi \
+	--size 128
+
